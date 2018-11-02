@@ -1,0 +1,2 @@
+# dataanal
+Adatelemzes
