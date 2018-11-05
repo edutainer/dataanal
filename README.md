@@ -1,3 +1,3 @@
 # dataanal
-##Distributed systems
+## Distributed systems
 Adatelemzes
