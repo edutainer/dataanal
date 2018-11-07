@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2018-11-07T11:47:10.366439848"/>
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2018-11-07T10:48:55.616466503">
+	<script type="text/javascript" language="JavaScript" src="https://edutainer.github.io/dataanal/scripts/flipmenu.js">/*Flip Menu- by Osem Websystems http://www.osem.nl/*/</script>
+	<style type="text/css">
+		h4.cjk { font-family: "Noto Sans CJK SC Regular" }
+		h4.ctl { font-family: "FreeSans" }
+		h2.cjk { font-family: "Noto Sans CJK SC Regular" }
+		h2.ctl { font-family: "FreeSans" }
+		h3.cjk { font-family: "Noto Sans CJK SC Regular" }
+		h3.ctl { font-family: "FreeSans" }
+		h5.cjk { font-family: "Noto Sans CJK SC Regular" }
+		h5.ctl { font-family: "FreeSans" }
+	</style>
+</head>
+<body lang="hu-HU" dir="ltr">
+
+<h1><p>CONVOLUTIONAL NEURAL NETWORKS</p></h1>
+	
+	TARTALOM ><ul class="flipMenu" style='position:relative;top:0;text-transform:uppercase;font-family: "Comic Sans MS"'><li><a href="#nn-cnn-rnn">#nn-cnn-rnn</a>
+		><ul><li><a href="#nn-cnn-rnn-hu">#nn-cnn-rnn-hu</a>
+			</li><li><a href="#nn-cnn-rnn-en">#nn-cnn-rnn-en</a>
+		</li></ul>
+	</li><li><a href="#nn-cnn-matek">#nn-cnn-matek</a>
+		><ul><li><a href="#nn-cnn-matek-hu">#nn-cnn-matek-hu</a>
+			</li><li><a href="#nn-cnn-matek-en">#nn-cnn-matek-en</a>
+			><ul><li><a href="#nn-cnn-matek-en-lstm">#nn-cnn-matek-en-lstm</a>
+				</li><li><a href="#nn-cnn-matek-en-attention">#nn-cnn-matek-en-attention</a>
+			</li></ul>
+		</li></ul>
+	</li><li><a href="#nn-cnn-py">#nn-cnn-py</a>
+		><ul><li><a href="#nn-cnn-py-lstm">#nn-cnn-py-lstm</a>
+			</li><li><a href="#nn-cnn-py-rcnn-hu">#nn-cnn-py-rcnn-hu</a>
+			</li><li><a href="#nn-cnn-py-en">#nn-cnn-py-en</a>
+				><ul><li><a href="#nn-cnn-py-rcnn-en">#nn-cnn-py-rcnn-en</a>
+	    	</li></ul>
+		</li><li><a href="#nn-cnn-py-keras">#nn-cnn-py-keras</a>
+		</li></ul>
+	</li></ul>
+	
+<h1><a ID="nn-cnn-rnn"></a>RECURRENT &nbsp;(RNN)</h1>
+	
+<h2><a ID="nn-cnn-rnn-hu"></a>RNN MAGYARUL</h2>
+<p></p>
+<p><a href="https://www.google.com/url?q=http://www.cs.bme.hu/~daroczyb/Adatelemzes2018/Adatelemzes_apr16.pdf&amp;sa=D&amp;ust=1541584518228000">Adatelemzés</a>&nbsp;RBM
+LSTM RNN fast-, faster R-CNN, keras, TF, MNIST, SVN - tobbnyire vazlatos.</a></p><p></p>
+
+<h2 ><a ID="nn-cnn-rnn-en"></a>RNN ENGLISH</h2>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/What-are-the-differences-between-DBN-and-CNN-Which-one-is-good-for-object-detection-and-why&amp;sa=D&amp;ust=1541584518237000">What
+are the differences between DBN and CNN? </a><a href="https://www.google.com/url?q=https://www.quora.com/What-are-the-differences-between-DBN-and-CNN-Which-one-is-good-for-object-detection-and-why&amp;sa=D&amp;ust=1541584518237000">Which
+one is good for object detection and why?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/Can-anyone-list-the-differences-between-DBN-RBM-DBM-RNN-CNN-SAE-and-NN-using-simple-examples&amp;sa=D&amp;ust=1541584518239000">Can
+anyone list the differences between DBN, RBM, DBM, RNN, CNN, SAE, and NN using simple examples?</a></p>
+
+<h1><a ID="nn-cnn-matek"></a>MATEK</h1>
+
+<a ID="nn-cnn-matek-hu"></a><h2>CNN - MATEK (MAGYAR)</h2>
+<p>Transzformaciotanulas 2 dimenzios kepeken&nbsp;- 2.5.2.
+Konvolucios halok - <a href="https://www.google.com/url?q=http://web.cs.elte.hu/blobs/diplomamunkak/msc_alkmat/2017/aleksziev_rita_antonia.pdf%23subsubsection.2.5.2&amp;sa=D&amp;ust=1541584518329000">CNN</a>,
+G-CNN</p>
+<p>[PDF]<a href="https://www.google.com/url?q=http://home.mit.bme.hu/~engedy/NN/NN-CNN.pdf&amp;sa=D&amp;ust=1541584518330000">KONVOLÚCIÓS</a><a href="https://www.google.com/url?q=http://home.mit.bme.hu/~engedy/NN/NN-CNN.pdf&amp;sa=D&amp;ust=1541584518330000">&nbsp;neurális
+hálózatok (CNN)</a></p>
+<p><a href="https://www.google.com/url?q=https://bois083.wordpress.com/szamtabla-felismeres-konvolucios-neuralis-haloval/&amp;sa=D&amp;ust=1541584518331000">Diplomadolgozat
+– </a><a href="https://www.google.com/url?q=https://bois083.wordpress.com/szamtabla-felismeres-konvolucios-neuralis-haloval/&amp;sa=D&amp;ust=1541584518331000">SZÁMTÁBLA
+FELISMERÉS KONVOLÚCIÓS</a><a href="https://www.google.com/url?q=https://bois083.wordpress.com/szamtabla-felismeres-konvolucios-neuralis-haloval/&amp;sa=D&amp;ust=1541584518331000">&nbsp;neurális
+hálóval</a></p>
+<ul>
+	<li/>
+<p><a href="https://www.google.com/url?q=https://bois083.wordpress.com/szamtabla-felismeres-konvolucios-neuralis-haloval/&amp;sa=D&amp;ust=1541584518332000">https://bois083.wordpress.com/</a><a href="https://www.google.com/url?q=https://bois083.wordpress.com/szamtabla-felismeres-konvolucios-neuralis-haloval/&amp;sa=D&amp;ust=1541584518332000">szamtabla-felismeres-konvolucios-neuralis-haloval/</a></p>
+</ul>
+<p><a href="https://www.google.com/url?q=https://medium.com/@SmartLabAI/aut%25C3%25B3k-detekt%25C3%25A1l%25C3%25A1sa-m%25C3%25A9ly-neur%25C3%25A1lis-h%25C3%25A1l%25C3%25B3zat-seg%25C3%25ADts%25C3%25A9g%25C3%25A9vel-android-k%25C3%25A9sz%25C3%25BCl%25C3%25A9ken-vizu%25C3%25A1lis-m%25C3%25A9diumon-285a38b78fd4&amp;sa=D&amp;ust=1541584518333000">Autók</a><a href="https://www.google.com/url?q=https://medium.com/@SmartLabAI/aut%25C3%25B3k-detekt%25C3%25A1l%25C3%25A1sa-m%25C3%25A9ly-neur%25C3%25A1lis-h%25C3%25A1l%25C3%25B3zat-seg%25C3%25ADts%25C3%25A9g%25C3%25A9vel-android-k%25C3%25A9sz%25C3%25BCl%25C3%25A9ken-vizu%25C3%25A1lis-m%25C3%25A9diumon-285a38b78fd4&amp;sa=D&amp;ust=1541584518333000">&nbsp;detektálása
+</a><a href="https://www.google.com/url?q=https://medium.com/@SmartLabAI/aut%25C3%25B3k-detekt%25C3%25A1l%25C3%25A1sa-m%25C3%25A9ly-neur%25C3%25A1lis-h%25C3%25A1l%25C3%25B3zat-seg%25C3%25ADts%25C3%25A9g%25C3%25A9vel-android-k%25C3%25A9sz%25C3%25BCl%25C3%25A9ken-vizu%25C3%25A1lis-m%25C3%25A9diumon-285a38b78fd4&amp;sa=D&amp;ust=1541584518334000">mély
+neurális hálózat</a><a href="https://www.google.com/url?q=https://medium.com/@SmartLabAI/aut%25C3%25B3k-detekt%25C3%25A1l%25C3%25A1sa-m%25C3%25A9ly-neur%25C3%25A1lis-h%25C3%25A1l%25C3%25B3zat-seg%25C3%25ADts%25C3%25A9g%25C3%25A9vel-android-k%25C3%25A9sz%25C3%25BCl%25C3%25A9ken-vizu%25C3%25A1lis-m%25C3%25A9diumon-285a38b78fd4&amp;sa=D&amp;ust=1541584518334000">&nbsp;segítségével
+Android</a></p>
+
+<h2><a ID="nn-cnn-matek-en"></a>CNN - MATEK (english)</h2>
+<h3 class="western"><a name="h.bap69d6rpssv"></a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2017/06/architecture-of-convolutional-neural-networks-simplified-demystified/&amp;sa=D&amp;ust=1541584518336000">Architecture
+of Convolutional Neural Networks(CNN) demystified</a></h3>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/In-convolutional-neural-networks-what-is-convolution-How-does-one-convolute&amp;sa=D&amp;ust=1541584518336000">In
+</a><a href="https://www.google.com/url?q=https://www.quora.com/In-convolutional-neural-networks-what-is-convolution-How-does-one-convolute&amp;sa=D&amp;ust=1541584518336000">convolutional
+neural networks</a><a href="https://www.google.com/url?q=https://www.quora.com/In-convolutional-neural-networks-what-is-convolution-How-does-one-convolute&amp;sa=D&amp;ust=1541584518337000">,
+</a><a href="https://www.google.com/url?q=https://www.quora.com/In-convolutional-neural-networks-what-is-convolution-How-does-one-convolute&amp;sa=D&amp;ust=1541584518337000">what
+is convolution? How does one convolute?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.coursera.org/learn/convolutional-neural-networks&amp;sa=D&amp;ust=1541584518338000">coursera</a><a href="https://www.google.com/url?q=https://www.coursera.org/learn/convolutional-neural-networks&amp;sa=D&amp;ust=1541584518338000">.org/learn/</a><a href="https://www.google.com/url?q=https://www.coursera.org/learn/convolutional-neural-networks&amp;sa=D&amp;ust=1541584518338000">convolutional-neural-networks</a></p>
+<p>SSD: Single shot multibox detector (2016), W. Liu et
+al.<a href="https://www.google.com/url?q=https://arxiv.org/pdf/1512.02325&amp;sa=D&amp;ust=1541584518339000">&nbsp;</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1512.02325&amp;sa=D&amp;ust=1541584518339000">[pdf]</a>&nbsp;R-CNN</p>
+<p><a href="https://www.google.com/url?q=https://github.com/terryum/awesome-deep-learning-papers%23understanding--generalization--transfer&amp;sa=D&amp;ust=1541584518339000">Understanding
+/ Generalization / Transfer</a></p>
+<a href="https://www.google.com/url?q=https://github.com/terryum/awesome-deep-learning-papers%23convolutional-neural-network-models&amp;sa=D&amp;ust=1541584518340000">Convolutional
+Network</a><a href="https://www.google.com/url?q=https://github.com/terryum/awesome-deep-learning-papers%23convolutional-neural-network-models&amp;sa=D&amp;ust=1541584518340000">&nbsp;Models</a>
+<ul>
+	<li/>
+Long-term recurrent	convolutional networks for visual recognition and description (2015).<a href="https://www.google.com/url?q=http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf&amp;sa=D&amp;ust=1541584518340000">&nbsp;</a><a href="https://www.google.com/url?q=http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf&amp;sa=D&amp;ust=1541584518341000">[pdf]</a>
+	<li/>
+Image Super-Resolution Usin	Deep Convolutional Networks&nbsp;(2016). <a href="https://www.google.com/url?q=https://arxiv.org/pdf/1501.00092v3.pdf&amp;sa=D&amp;ust=1541584518341000">[pdf</a>]
+	<li/>
+Two-stream convolutional networks for action recognition in videos (2014),<a href="https://www.google.com/url?q=http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf&amp;sa=D&amp;ust=1541584518342000">&nbsp;</a><a href="https://www.google.com/url?q=http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf&amp;sa=D&amp;ust=1541584518342000">[pdf]</a>
+<li/>
+3D convolutional neural networks for human action recognition&nbsp;(2013), <a href="https://www.google.com/url?q=http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_JiXYY10.pdf&amp;sa=D&amp;ust=1541584518343000">[pdf]</a>
+	<li/>
+How transferable are features in
+	deep neural networks? (2014),<a href="https://www.google.com/url?q=http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf&amp;sa=D&amp;ust=1541584518343000">&nbsp;</a><a href="https://www.google.com/url?q=http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf&amp;sa=D&amp;ust=1541584518343000">[pdf]</a>
+<li/>
+CNN features off-the-Shelf: An
+	astounding baseline for recognition (2014)<a href="https://www.google.com/url?q=http://www.cv-foundation.org//openaccess/content_cvpr_workshops_2014/W15/papers/Razavian_CNN_Features_Off-the-Shelf_2014_CVPR_paper.pdf&amp;sa=D&amp;ust=1541584518344000">&nbsp;</a><a href="https://www.google.com/url?q=http://www.cv-foundation.org//openaccess/content_cvpr_workshops_2014/W15/papers/Razavian_CNN_Features_Off-the-Shelf_2014_CVPR_paper.pdf&amp;sa=D&amp;ust=1541584518344000">[pdf]</a>
+	<li/>
+Learning and transferring
+	mid-Level image representations using CNNs (2014),<a href="https://www.google.com/url?q=http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Oquab_Learning_and_Transferring_2014_CVPR_paper.pdf&amp;sa=D&amp;ust=1541584518345000">[pdf]</a>
+	<li/>
+Visualizing and understanding
+	convolutional networks (2014),<a href="https://www.google.com/url?q=http://arxiv.org/pdf/1311.2901&amp;sa=D&amp;ust=1541584518345000">&nbsp;</a><a href="https://www.google.com/url?q=http://arxiv.org/pdf/1311.2901&amp;sa=D&amp;ust=1541584518345000">[pdf]</a>
+	<li/>
+Decaf: A deep convolutional
+	activation feature for generic visual recognition (2014),<a href="https://www.google.com/url?q=http://arxiv.org/pdf/1310.1531&amp;sa=D&amp;ust=1541584518346000">[pdf]</a>
+	<li/>
+Convolutional Sequence to Sequence Learning (2017), Jonas Gehring et al.<a href="https://www.google.com/url?q=https://arxiv.org/pdf/1705.03122&amp;sa=D&amp;ust=1541584518346000">&nbsp;</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1705.03122&amp;sa=D&amp;ust=1541584518347000">[pdf]</a>
+	<li/>
+Evolution Strategies as a Scalable Alternative to Reinforcement Learning (2017),<a href="https://www.google.com/url?q=http://arxiv.org/pdf/1703.03864v1.pdf&amp;sa=D&amp;ust=1541584518347000">&nbsp;</a><a href="https://www.google.com/url?q=http://arxiv.org/pdf/1703.03864v1.pdf&amp;sa=D&amp;ust=1541584518347000">[pdf]</a>
+	<li/>
+Deformable Convolutional
+	Networks (2017), J. Dai et al.<a href="https://www.google.com/url?q=http://arxiv.org/pdf/1703.06211v2.pdf&amp;sa=D&amp;ust=1541584518347000">&nbsp;</a><a href="https://www.google.com/url?q=http://arxiv.org/pdf/1703.06211v2.pdf&amp;sa=D&amp;ust=1541584518348000">[pdf]</a>
+	<li/>
+Mask R-CNN (2017), K. He et
+	al.<a href="https://www.google.com/url?q=https://128.84.21.199/pdf/1703.06870&amp;sa=D&amp;ust=1541584518348000">&nbsp;</a><a href="https://www.google.com/url?q=https://128.84.21.199/pdf/1703.06870&amp;sa=D&amp;ust=1541584518348000">[pdf]</a>
+<li/>
+PixelNet: Representation of the pixels, by the pixels, and
+	for the pixels (2017),<a href="https://www.google.com/url?q=http://arxiv.org/pdf/1702.06506v1.pdf&amp;sa=D&amp;ust=1541584518349000">&nbsp;</a><a href="https://www.google.com/url?q=http://arxiv.org/pdf/1702.06506v1.pdf&amp;sa=D&amp;ust=1541584518349000">[pdf]</a>
+</ul>
+<p>			<strong><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/kv-ARcEIn94/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518350000">10 Advanced Deep Learning Architectures Data Scientists Should Know!</a></strong>&nbsp;- AlexNet,VGG,GoogleNet,ResNet,ResNeXt,RCNN,YOLO,SqueezeNet,SegNet,GAN.</p>
+<p>			<strong><a href="https://www.google.com/url?q=https://research.fb.com/facebook-open-sources-detectron/&amp;sa=D&amp;ust=1541584518351000">Google&rsquo;s Cloud AutoML Vision</a>. - &nbsp;<a href="https://www.google.com/url?q=https://arxiv.org/abs/1703.06870&amp;sa=D&amp;ust=1541584518351000">Mask R-CNN</a>&nbsp;and<a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.02002&amp;sa=D&amp;ust=1541584518351000">&nbsp;</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.02002&amp;sa=D&amp;ust=1541584518351000">Focal Loss for Dense </a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.02002&amp;sa=D&amp;ust=1541584518352000">Object Detection</a>,</strong></p>
+<p>Understand the generalization&nbsp;mystery of deep learning, one
+of the biggest unsolved&nbsp;problems in machine learning&nbsp;theory
+today: &nbsp;<a href="https://www.google.com/url?q=https://arxiv.org/pdf/1409.1556.pdf&amp;sa=D&amp;ust=1541584518353000">ConvNet</a>:
+Eredményeink ismét megerősítik a mélység fontosságát a
+vizuális ábrázolásban.</p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/How-is-CNN-better-than-SVM-and-recurrent-neural-networks&amp;sa=D&amp;ust=1541584518353000">How
+is </a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-CNN-better-than-SVM-and-recurrent-neural-networks&amp;sa=D&amp;ust=1541584518353000">CNN
+better than SVM and recurrent</a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-CNN-better-than-SVM-and-recurrent-neural-networks&amp;sa=D&amp;ust=1541584518354000">&nbsp;neural
+networks?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518354000">How
+is a </a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518354000">convolutional</a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518355000">&nbsp;neural
+network algorithm </a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518355000">better</a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518356000">&nbsp;as
+compared to </a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518356000">other</a><a href="https://www.google.com/url?q=https://www.quora.com/How-is-a-convolutional-neural-network-algorithm-better-as-compared-to-other-image-classification-algorithms&amp;sa=D&amp;ust=1541584518356000">&nbsp;image
+classification algorithms?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/How-can-I-make-a-background-subtraction-with-neural-networks-such-as-CNN-convolutional-neural-networks&amp;sa=D&amp;ust=1541584518357000">How
+can I make a</a><a href="https://www.google.com/url?q=https://www.quora.com/How-can-I-make-a-background-subtraction-with-neural-networks-such-as-CNN-convolutional-neural-networks&amp;sa=D&amp;ust=1541584518357000">&nbsp;background
+subtraction</a><a href="https://www.google.com/url?q=https://www.quora.com/How-can-I-make-a-background-subtraction-with-neural-networks-such-as-CNN-convolutional-neural-networks&amp;sa=D&amp;ust=1541584518357000">&nbsp;with
+neural networks such as </a><a href="https://www.google.com/url?q=https://www.quora.com/How-can-I-make-a-background-subtraction-with-neural-networks-such-as-CNN-convolutional-neural-networks&amp;sa=D&amp;ust=1541584518358000">CNN</a><a href="https://www.google.com/url?q=https://www.quora.com/How-can-I-make-a-background-subtraction-with-neural-networks-such-as-CNN-convolutional-neural-networks&amp;sa=D&amp;ust=1541584518358000">&nbsp;(convolutional
+neural networks)?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/In-convolutional-neural-networks-what-is-convolution-How-does-one-convolute&amp;sa=D&amp;ust=1541584518359000">In
+convolutional neural networks, what is convolution? How does one
+convolute?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/Why-is-convolution-important&amp;sa=D&amp;ust=1541584518359000">Why
+is convolution important?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/How-can-l-explain-the-dimensionality-reduction-in-convolutional-neural-network-CNN-from-this-image&amp;sa=D&amp;ust=1541584518360000">How
+can l explain the dimensionality reduction in convolutional neural
+network (CNN) from this image?</a></p>
+<p><a href="https://www.google.com/url?q=https://www.quora.com/How-can-I-incorporate-side-information-into-a-convolutional-neural-net-classifier&amp;sa=D&amp;ust=1541584518360000">How
+can I incorporate side information into a convolutional neural net
+classifier?</a></p>
+<p><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518361000">Temporal
+convolutional</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518361000">&nbsp;network
+(</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518361000">TCN</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518362000">)</a></p>
+<p><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518362000">Generic
+</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518362000">CONVOLUTIONAL</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518362000">&nbsp;and
+</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518363000">RECURRENT</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518363000">&nbsp;Networks
+for </a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518363000">SEQUENCE</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1803.01271&amp;sa=D&amp;ust=1541584518363000">&nbsp;Modeling</a></p>
+<p><a href="https://www.google.com/url?q=https://docs.google.com/document/d/1U8ZBGxzHQx4a0dCRB3qYeuGrCFeryAeB0kCcBMH3fC4/edit%23bookmark%3Did.sv35xeyjy8pf&amp;sa=D&amp;ust=1541584518364000">UDACITY
+COURSE</a></p>
+<p><a href="https://www.google.com/url?q=https://lifeasalgorithm.com/posts/intuitive-physics-net&amp;sa=D&amp;ust=1541584518364000">https:/</a><a href="https://www.google.com/url?q=https://lifeasalgorithm.com/posts/intuitive-physics-net&amp;sa=D&amp;ust=1541584518365000">Life</a><a href="https://www.google.com/url?q=https://lifeasalgorithm.com/posts/intuitive-physics-net&amp;sa=D&amp;ust=1541584518365000">as</a><a href="https://www.google.com/url?q=https://lifeasalgorithm.com/posts/intuitive-physics-net&amp;sa=D&amp;ust=1541584518365000">Algorithm</a><a href="https://www.google.com/url?q=https://lifeasalgorithm.com/posts/intuitive-physics-net&amp;sa=D&amp;ust=1541584518365000">.com/posts/intuitive-physics-net</a></p>
+
+<h3><a ID="nn-cnn-matek-en-lstm"></a>CNN, LSTM</h3>
+<p><a href="https://www.google.com/url?q=http://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiOTU1NjU4OCIsImRlbGl2ZXJ5X2lkIjoiMzc4MDA2Mzc1NyIsInVybCI6Imh0dHBzOi8vbWFjaGluZWxlYXJuaW5nbWFzdGVyeS5jb20vZGVlcC1sZWFybmluZy1tb2RlbHMtZm9yLWh1bWFuLWFjdGl2aXR5LXJlY29nbml0aW9uP19fcz1memZqamFwd3BtM2Z3cDYzcTN5ZSJ9&amp;sa=D&amp;ust=1541584518366000">Deep
+Learning Models for Human Activity Recognition</a></p>
+
+<h3 class="western"><a ID="nn-cnn-matek-en-attention"></a>ATTENTION</h3>
+<p><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518367000">Setting an </a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518367000">attention
+region</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518367000">&nbsp;for
+</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518368000">Convolutional</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518368000">&nbsp;</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518368000">N</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518368000">eural
+</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518369000">N</a><a href="https://www.google.com/url?q=https://arxiv.org/pdf/1708.08711&amp;sa=D&amp;ust=1541584518369000">etworks</a></p>
+<p><a href="https://www.google.com/url?q=http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_Residual_Attention_Network_CVPR_2017_paper.pdf&amp;sa=D&amp;ust=1541584518369000">Residual
+attention</a><a href="https://www.google.com/url?q=http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_Residual_Attention_Network_CVPR_2017_paper.pdf&amp;sa=D&amp;ust=1541584518370000">&nbsp;</a><a href="https://www.google.com/url?q=http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_Residual_Attention_Network_CVPR_2017_paper.pdf&amp;sa=D&amp;ust=1541584518370000">network
+for image classification</a></p>
+<p><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/Avbytes/~3/xa2h9YxO3-A/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518370000">NVIDIA’s
+Machine Learning Model Converts a Standard Video into Stunning Slow Motion</a></p>
+<b><a href="https://www.google.com/url?q=https://towardsdatascience.com/the-fall-of-rnn-lstm-2d1594c74ce0&amp;sa=D&amp;ust=1541584518371000">The
+fall of RNN / LSTM – Towards Data Science</a></b>
+
+<h1><a ID="nn-cnn-py"></a>PYTHON</h1><p></p>
+
+<h2><a ID="nn-cnn-py-lstm"></a>LSTM - PYTHON</h2>
+<p><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518390000">Automatic
+</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518390000">Image
+Captioning</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518391000">&nbsp;using
+Deep Learning (</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518391000">CNN</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518391000">&nbsp;and
+</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518391000">LSTM</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518392000">)
+in </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/sB8_HrcaWNE/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518392000">PyTorch</a></p>
+<p></p>
+<b><p><a href="https://www.google.com/url?q=https://docs.google.com/document/d/1Xt38KvWrQs7OXCX7Q5dGBGaWbDI1S0DNUufVOpr_xco/edit%23bookmark%3Did.5g6zlsrn9zp&amp;sa=D&amp;ust=1541584518401000">KÖNYVEK
+	LSTM-RNN:</a></p></b>
+<h4 >CNN-LSTM-Py SAMPLE</h4>
+<p><a href="https://www.google.com/url?q=http://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiOTU1NjU4OCIsImRlbGl2ZXJ5X2lkIjoiMzc4MDA2Mzc1NyIsInVybCI6Imh0dHBzOi8vbWFjaGluZWxlYXJuaW5nbWFzdGVyeS5jb20vaG93LXRvLWxvYWQtYW5kLWV4cGxvcmUtaG91c2Vob2xkLWVsZWN0cmljaXR5LXVzYWdlLWRhdGE_X19zPWZ6ZmpqYXB3cG0zZndwNjNxM3llIn0&amp;sa=D&amp;ust=1541584518402000">How
+to Load and Explore Household Electricity Usage Data</a></p>
+
+<a id="nn-cnn-py-rcnn-hu"></a><h3 class="western">R-CNN&nbsp;(MAGYAR)</h3>
+<p><a href="https://www.google.com/url?q=http://www.cs.bme.hu/~daroczyb/Adatelemzes2018/Adatelemzes_apr16.pdf&amp;sa=D&amp;ust=1541584518422000">2018</a><a href="https://www.google.com/url?q=http://www.cs.bme.hu/~daroczyb/Adatelemzes2018/Adatelemzes_apr16.pdf&amp;sa=D&amp;ust=1541584518423000">/</a><a href="https://www.google.com/url?q=http://www.cs.bme.hu/~daroczyb/Adatelemzes2018/Adatelemzes_apr16.pdf&amp;sa=D&amp;ust=1541584518423000">Adatelemzes_apr16.pdf</a>&nbsp;:
+R-CNN, Fast-, Faster R-CNN&nbsp;</p>
+<p>Három nagyobb terület:</p>
+ <p> • generatív (pl. Boltzmann Machine (RBM, DBN), VAE, GAN):</p>
+ <p> • Általános modell, adatot modellezi</p>
+ <p> • Feed-forward NN: pl. Convolutional NN (és iterációi:Inception, ResNet stb.)</p>
+ <p> • DAG struktúra, nincs irányított kör</p>
+ <p> • Recurrent NN (pl. LSTM és GRU):</p>
+ <p> • Irányított kör is megengedett (általában az előző állapot)</p>
+<p><a href="https://www.google.com/url?q=http://www.stud.u-szeged.hu/Rafai.Norbert/milestone_2.html&amp;sa=D&amp;ust=1541584518425000">stud.u-szeged.hu/Rafai.Norbert</a>&nbsp;A
+tanításhoz R-CNN-t (Regions&nbsp;with Convolutional Neural Network)
+használ, amivel meg tudja tanulni, hogy a kép egyes régióin
+milyen objektum van. Ehhez olyan képek szükségesek, melyeken előre
+bejelölték, hogy az adott régión milyen objektum szerepel. A
+példa úgynevezett transfer learning módszert használ, amelynek
+lényege, hogy a neurális hálót egy sok képet tartalmazó
+adatbázison tanítják, majd ezt finomhangolják a kívánt objektum
+megtalálásához. Ezzel a módszerrel sokkal kevesebb tanítóképre
+van szükség, mintha nem lenne egy előre betanított hálónk. Az
+előre betanítás a CIFAR-10 képgyűjteménnyel történik [14].
+Ezután saját képekkel tanítva lehet finomhangolni a hálót.</p>
+<p><a href="https://www.google.com/url?q=https://docs.microsoft.com/hu-hu/azure/machine-learning/service/how-to-build-deploy-object-detection-models&amp;sa=D&amp;ust=1541584518426000">Hozzon
+létre, és telepítsen </a><a href="https://www.google.com/url?q=https://docs.microsoft.com/hu-hu/azure/machine-learning/service/how-to-build-deploy-object-detection-models&amp;sa=D&amp;ust=1541584518426000">&nbsp;Azure
+Machine</a><a href="https://www.google.com/url?q=https://docs.microsoft.com/hu-hu/azure/machine-learning/service/how-to-build-deploy-object-detection-models&amp;sa=D&amp;ust=1541584518426000">&nbsp;objektummodellt</a></p>
+
+<a id="nn-cnn-py-en"></a><h2>Py CNN - (English)</h2>
+<p><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.04607&amp;sa=D&amp;ust=1541584518413000">Segmentation-Aware</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.04607&amp;sa=D&amp;ust=1541584518413000">&nbsp;C</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.04607&amp;sa=D&amp;ust=1541584518413000">onvolutional
+</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.04607&amp;sa=D&amp;ust=1541584518413000">N</a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.04607&amp;sa=D&amp;ust=1541584518414000">etworks
+Using </a><a href="https://www.google.com/url?q=https://arxiv.org/abs/1708.04607&amp;sa=D&amp;ust=1541584518414000">Local
+Attention</a>&nbsp;- ( <a href="https://www.google.com/url?q=https://github.com/aharley/segaware&amp;sa=D&amp;ust=1541584518414000">cpp</a>&nbsp;)</p>
+<p><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/HWExIUGjbB4/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518415000">Top
+10 </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/HWExIUGjbB4/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518415000">Pretrained
+Models to </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/HWExIUGjbB4/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518415000">get
+you Started</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/HWExIUGjbB4/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518416000">&nbsp;with
+Deep Learning </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/HWExIUGjbB4/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518416000">(Part
+1 – Computer Vision)</a></p>
+<p>&nbsp; &nbsp;Object Detection: Mask R-CNN, YOLOv2. MobileNet,
+Ripe/unripe tomato classification, Car classification.</p>
+<p><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/45GotInBy8E/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518417000">Essentials
+of Deep Learning: </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/45GotInBy8E/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518417000">Visualizing</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/45GotInBy8E/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518417000">&nbsp;Convolutional
+Neural Networks in Python</a></p>
+<p><a href="https://www.google.com/url?q=https://code.fb.com/ai-research/talk-the-walk-teaching-ai-systems-to-navigate-new-york-through-language/&amp;sa=D&amp;ust=1541584518418000">Talk
+The Walk</a>&nbsp;- <a href="https://www.google.com/url?q=https://github.com/facebookresearch/talkthewalk&amp;sa=D&amp;ust=1541584518418000">GitHub</a><a href="https://www.google.com/url?q=https://github.com/facebookresearch/talkthewalk&amp;sa=D&amp;ust=1541584518418000">&nbsp;Repository</a>&nbsp;with
+details on how to download the DATASET&nbsp;(py) - <a href="https://www.google.com/url?q=https://arxiv.org/pdf/1807.03367.pdf&amp;sa=D&amp;ust=1541584518419000">Research
+Paper</a><br/>
+<a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/_ppbfPItkzg/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518419000">Deep
+Learning Tutorial to Calculate the </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/_ppbfPItkzg/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518419000">Screen
+Time of ACTORS</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/_ppbfPItkzg/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518420000">&nbsp;in
+</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/_ppbfPItkzg/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518420000">any
+Video</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/AnalyticsVidhya/~3/_ppbfPItkzg/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518420000">&nbsp;(Python)</a></p>
+<p><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518421000">Convolutional
+Neural Networks for </a><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518421000">Beginners:
+Practical Guide</a><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518421000">&nbsp;with
+Python and </a><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518422000">Keras</a></p>
+
+<a id="nn-cnn-py-rcnn-en"></a><h3>R-CNN&nbsp;(English)</h3>
+<p><a href="https://www.google.com/url?q=https://medium.com/@jonathan_hui/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c&amp;sa=D&amp;ust=1541584518427000">Feature
+Pyramid</a><a href="https://www.google.com/url?q=https://medium.com/@jonathan_hui/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c&amp;sa=D&amp;ust=1541584518427000">&nbsp;Networks
+for </a><a href="https://www.google.com/url?q=https://medium.com/@jonathan_hui/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c&amp;sa=D&amp;ust=1541584518428000">object
+detection</a><a href="https://www.google.com/url?q=https://medium.com/@jonathan_hui/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c&amp;sa=D&amp;ust=1541584518428000">&nbsp;–
+FPN</a></p>
+<p><a href="https://www.google.com/url?q=https://www.mathworks.com/help/vision/examples/object-detection-using-deep-learning.html&amp;sa=D&amp;ust=1541584518428000">mathworks</a><a href="https://www.google.com/url?q=https://www.mathworks.com/help/vision/examples/object-detection-using-deep-learning.html&amp;sa=D&amp;ust=1541584518429000">/examples/object-detection-using-deep-learning</a></p>
+<p><a href="https://www.google.com/url?q=https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab&amp;sa=D&amp;ust=1541584518429000">understanding-</a><a href="https://www.google.com/url?q=https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab&amp;sa=D&amp;ust=1541584518430000">ssd-multibox-real-time-object-detection</a><a href="https://www.google.com/url?q=https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab&amp;sa=D&amp;ust=1541584518430000">-in-deep-learning</a></p>
+<p><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/Avbytes/~3/0joAORLWZtc/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518430000">Build
+your own Computer Vision Model with the Latest TensorFlow </a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/Avbytes/~3/0joAORLWZtc/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518431000">Object
+</a><a href="https://www.google.com/url?q=http://feedproxy.google.com/~r/Avbytes/~3/0joAORLWZtc/?utm_source%3Dfeedburner%26utm_medium%3Demail&amp;sa=D&amp;ust=1541584518431000">Detection
+AP</a>I&nbsp;</p>
+<p><a href="https://www.google.com/url?q=https://arxiv.org/abs/1807.03284&amp;sa=D&amp;ust=1541584518431000">Pooling
+Pyramid Network</a></p>
+<p><a href="https://www.google.com/url?q=https://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html&amp;sa=D&amp;ust=1541584518432000">2018/07/</a><a href="https://www.google.com/url?q=https://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html&amp;sa=D&amp;ust=1541584518432000">accelerated</a><a href="https://www.google.com/url?q=https://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html&amp;sa=D&amp;ust=1541584518432000">-training-and-inference-with</a>&nbsp;<a href="https://www.google.com/url?q=http://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html&amp;sa=D&amp;ust=1541584518433000">the
+</a><a href="https://www.google.com/url?q=http://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html&amp;sa=D&amp;ust=1541584518433000">Tensorflow
+</a><a href="https://www.google.com/url?q=http://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html&amp;sa=D&amp;ust=1541584518433000">Object
+Detection API</a></p>
+<p><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518434000">Ultimate
+Guide: Building a </a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518434000">Mask
+R-CNN</a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518434000">&nbsp;</a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518434000">Model
+for </a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518435000">Detecting</a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518435000">&nbsp;Car
+Damage</a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518435000">&nbsp;(with
+</a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518436000">Py</a><a href="https://www.google.com/url?q=https://www.analyticsvidhya.com/blog/2018/07/building-mask-r-cnn-model-detecting-damage-cars-python/&amp;sa=D&amp;ust=1541584518436000">thon
+codes)</a></p>
+<p><a href="https://www.google.com/url?q=https://arxiv.org/abs/1506.01497&amp;sa=D&amp;ust=1541584518436000">FASTER
+R-CNN</a></p>
+<p><a href="https://www.google.com/url?q=https://code.fb.com/ai-research/rosetta-understanding-text-in-images-and-videos-with-machine-learning/&amp;sa=D&amp;ust=1541584518437000">Rosetta:
+Understanding </a><a href="https://www.google.com/url?q=https://code.fb.com/ai-research/rosetta-understanding-text-in-images-and-videos-with-machine-learning/&amp;sa=D&amp;ust=1541584518437000">TEXT
+IN IMAGES</a><a href="https://www.google.com/url?q=https://code.fb.com/ai-research/rosetta-understanding-text-in-images-and-videos-with-machine-learning/&amp;sa=D&amp;ust=1541584518438000">&nbsp;and
+videos with machine learning</a></p>
+<p><a href="https://www.google.com/url?q=http://r.newsletters.analyticsvidhya.com/track/click/a9muvlke6gkclxh3d&amp;sa=D&amp;ust=1541584518451000">Essentials
+of Deep Learning: Visualizing Convolutional Neural Networks in Python</a>&nbsp;</p>
+
+<h2><p><a id="nn-cnn-py-keras"></a><br/>KERAS</p></h2>
+<p><a href="https://www.google.com/url?q=https://github.com/hhbyyh/mCNN&amp;sa=D&amp;ust=1541584518474000">https://github.com/hhbyyh/mCNN</a></p>
+<p><a href="https://www.google.com/url?q=https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/&amp;sa=D&amp;ust=1541584518475000">Develop
+Your First Neural Network in Python With Keras Step-By-Step</a></p>
+<p><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518475000">Convolutional
+Neural Networks for </a><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518476000">Beginners:
+Practical Guide</a><a href="https://www.google.com/url?q=https://towardsdatascience.com/convolutional-neural-networks-for-beginners-practical-guide-with-python-and-keras-dc688ea90dca?source%3Demail-anon_e104614191ad--publication.newsletter&amp;sa=D&amp;ust=1541584518476000">&nbsp;with
+Python and Keras</a></p>
+<p></p>
+<hr/>
+	<p></p>
+		<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+			<tbody>
+				<tr>
+					<td style="text-align: left; width: 33%;">
+						<strong><a href="http://htmleditor.in/index.html" target="_blank"><span style="color:#a9a9a9;">htmleditor.in</span></a></strong></td>
+					<td style="text-align: center;">
+						-</td>
+					<td style="text-align: right; width: 33%;">
+						<strong><span style="color:#a9a9a9;"><a href="http://alea.uw.hu">alea.uw.hu</a></span></strong></td>
+				</tr>
+			</tbody>
+		</table>
+
+</body>
+</html>
